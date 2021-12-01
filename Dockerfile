@@ -5,4 +5,4 @@ COPY scripts/* /srv/papermc/
 RUN pacman -Sy
 RUN pacman -S --noconfirm jq jre-openjdk python3 nano
 EXPOSE 25565
-RUN ./compile.sh
+RUN chmod +x ./*.sh && ./compile.sh
