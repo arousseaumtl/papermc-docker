@@ -11,6 +11,3 @@ curl https://papermc.io/api/v2/projects/paper/versions/$version/builds/$build/do
 
 java -jar $jar & \
   sleep 30 && killall java
-
-
-#if ls ./*.jar 2>&1 | grep -q 'cannot'; then cd /srv/papermc && compile; else echo "Server already compiled."; fi
