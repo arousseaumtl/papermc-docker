@@ -10,4 +10,4 @@ jar=$(curl -s https://papermc.io/api/v2/projects/paper/versions/$version/builds/
 curl https://papermc.io/api/v2/projects/paper/versions/$version/builds/$build/downloads/$jar -o $jar
 
 java -jar $jar & \
-  sleep 30 && killall java
+  sleep 60 && killall java
