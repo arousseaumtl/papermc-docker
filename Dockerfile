@@ -11,7 +11,7 @@ RUN latest_jre=$(apt-cache search 'jre$' | python3 -c 'import sys; print(sorted(
 
 RUN groupadd minecraft; useradd -m -g minecraft -s /bin/bash minecraft
 RUN mkdir /export; mkdir -p /home/minecraft/srv/papermc
-COPY files/* /home/minecraft/srv/papermc
+COPY files/* /home/minecraft/srv/papermc/
 RUN chmod +x /home/minecraft/srv/papermc/*.sh
 RUN chown minecraft:minecraft /export; chown -R minecraft:minecraft /home/minecraft/srv/papermc
 USER minecraft
