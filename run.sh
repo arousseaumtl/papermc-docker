@@ -12,5 +12,5 @@ if [ $# -eq 0 ]
     [[ "$@" =~ "--upgrade" || "$@" =~ "-u" ]] && ( docker run -p 25565:25565 $APP_NAME upgrade )
     [[ "$@" =~ "--tty" || "$@" =~ "-t" ]] && ( docker run -it --entrypoint /bin/bash $APP_NAME )
     [[ "$@" =~ "--export" || "$@" =~ "-e" ]] && ( docker run -v "$(pwd)"/files/export:/export --entrypoint "/bin/bash" $APP_NAME \
-      -c "cp -rp /home/minecraft/srv/papermc/* /export" )
+      -c "cp -rp /home/mc/srv/papermc/* /export" )
 fi
